@@ -1,0 +1,10 @@
+{
+  "/graphql": {
+    "target": "https://mock.codes",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/graphql" : ""},
+    "logLevel": "debug",
+    "headers": {}
+  }
+}
