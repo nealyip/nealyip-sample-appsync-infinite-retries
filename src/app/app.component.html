@@ -1,5 +1,9 @@
 <h4>Request:</h4>
 <form [formGroup]="form" (ngSubmit)="submit()">
+  <select formControlName="mode">
+    <option value="mutation">Mutation</option>
+    <option value="query">Query</option>
+  </select>
   <select formControlName="code">
     <option>Response status code</option>
     <option *ngFor="let option of options" [value]="option[0]">{{option[0]}} {{option[1]}}</option>
