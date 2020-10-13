@@ -43,8 +43,8 @@ export class AppComponent {
     const theClient = new AWSAppSyncClient(args);
 
     theClient.hydrated().then(async (client: AWSAppSyncClient<any>) => {
-      return client.query({
-        query: randomQuery
+      return client.mutate({
+        mutation: randomQuery
       });
     }).then(r => this.loading = false).catch(err => {
       console.error('Caught', err.message);
